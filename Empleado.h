@@ -21,7 +21,7 @@ public:
 	void setPassword(string _password);
 	string getUserId();
 	string getPassword();
-	bool checaLogInfo(string _userId, string _password);
+	bool checaLogInfo(string _userId, string _password); //sobreescritura
 };
 
 #endif
