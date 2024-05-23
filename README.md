@@ -16,3 +16,8 @@ La clase 'DatoDePaciente' tiene 2 constructores como las otras y setteres y gett
 La clase 'InfoDePago' tiene 4 atributos que son atributos de la clase 'DatoDepaciente'; 'estudio', 'tratamiento', 'fechaInicio' y 'fechaFinal'. La clase tiene dos constructores y un cosntructor con parametros se usa en el constructor de la clase 'DatoDePaciente' para recibir esos atributos. La clase 'InfoDePago' tiene setteres y getteres de los atributos y tiene un método que se llama 'getMontoTotal'. El método recibe los atributos 'listaDeEstudios', 'listaDeTratamiento', 'fechaInicial' y 'fechaFinal' y con estos datos va a decidir el monto total del paciente y va a regresar ese valor como floatante.
 
 Cuando el programa corre, el menu se imprime y le va a pedir al usario que acción quiere. Habrá 3 opciones: 1. Guardar el dato de paciente 2. Checar el monto total de paciente y cambiar el estado de pago de paciente 3. Salir. Luego el programa le va a pedir al usario el userId y el password y si es correcto (depende de que sí es doctor o administrativo, se va a llevar a cabo esa cierta acción. 
+
+#Cambio del avance 2
+
+![Proyecto2_2](https://github.com/DongjuMun/Proyecto_TC1030/assets/150094637/43e6ba3d-2276-4e52-8119-50054264d34b)
+
