@@ -29,4 +29,4 @@ Para la parte de sobreescritura, añadí 3 métodos nuevos que se llaman "checaL
 
 Para la parte de sobrecarga, en la clase "Doctor" y la clase "Administrativo", hay 3 constructores y uno de ellos reciben solo el "userId" y "password" como parametros y otro recibe todos los atributos de cada clase.
 
-Otros pequeños cambios fueron el tipo de return de "getEstudio()" y "getTratamiento()" de la clase "DatoDePaciente". Ahora van a regresar el puntador (la dirección de los arreglos).  
+Otros pequeños cambios fueron el tipo de return de "getEstudio()" y "getTratamiento()" de la clase "DatoDePaciente". Ahora van a regresar el puntador (la dirección de los arreglos). El otro fue agregar el método "checaIdDePaciente" de la clase "Adminstrativo". Lo creé para checar que si ese id del paciente existe en el sistema.
