@@ -21,3 +21,7 @@ Cuando el programa corre, el menu se imprime y le va a pedir al usario que acci�
 
 ![Proyecto2_2](https://github.com/DongjuMun/Proyecto_TC1030/assets/150094637/43e6ba3d-2276-4e52-8119-50054264d34b)
 
+El gran cambio que podemos ver en el nuevo diagrama es la falta de una clase. Eliminé la clase "InfoDePago" ya que puedo realizar los metodos en el método "guardarInfoDePago" de la clase "Doctor" sin la necesidad de crear una clase nueva, asignar sus atributos y calcular el monto total. En ese método "guardarInfoDePago" de la clase Doctor, vamos a guardar no solo las informaciones del paciente y el monto total, sino también vamos a añadir el login información del doctor para que si pase algun problema con el pago, puedan preguntarle al doctor que se encarga de ese paciente. Por el mismo razón, moví el método "guardarInfoDePaciente" que estaba en la clase de DatoDePaciente a la clase de Doctor, para guardar la información del doctor también. 
+
+El otro cambio que podemos ver es el atributo "datoDePaciente" de la clase "Doctor". Usé vector para que aunque no sepamos cuantos pacientes vamos a añadir, usando vector pudieramos añadir datos de pacientes sin tener limitación. Así que usando el nuevo método "agregarDatoDePaciente" vamos a agregar elementos al vector atributo "datoDePaciente" de la clase Doctor. También creé un getter para el vector "getDatoDePaciente".
+
