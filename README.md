@@ -17,11 +17,16 @@ La clase 'InfoDePago' tiene 4 atributos que son atributos de la clase 'DatoDepac
 
 Cuando el programa corre, el menu se imprime y le va a pedir al usario que acción quiere. Habrá 3 opciones: 1. Guardar el dato de paciente 2. Checar el monto total de paciente y cambiar el estado de pago de paciente 3. Salir. Luego el programa le va a pedir al usario el userId y el password y si es correcto (depende de que sí es doctor o administrativo, se va a llevar a cabo esa cierta acción. 
 
-#Cambio del avance 2
+# Cambio del avance 2
 
-![Proyecto2_2](https://github.com/DongjuMun/Proyecto_TC1030/assets/150094637/43e6ba3d-2276-4e52-8119-50054264d34b)
+![Proyecto2_2_1](https://github.com/DongjuMun/Proyecto_TC1030/assets/150094637/1b1841c7-1a2a-4c6c-8b24-66b2af693927)
 
 El gran cambio que podemos ver en el nuevo diagrama es la falta de una clase. Eliminé la clase "InfoDePago" ya que puedo realizar los metodos en el método "guardarInfoDePago" de la clase "Doctor" sin la necesidad de crear una clase nueva, asignar sus atributos y calcular el monto total. En ese método "guardarInfoDePago" de la clase Doctor, vamos a guardar no solo las informaciones del paciente y el monto total, sino también vamos a añadir el login información del doctor para que si pase algun problema con el pago, puedan preguntarle al doctor que se encarga de ese paciente. Por el mismo razón, moví el método "guardarInfoDePaciente" que estaba en la clase de DatoDePaciente a la clase de Doctor, para guardar la información del doctor también. 
 
 El otro cambio que podemos ver es el atributo "datoDePaciente" de la clase "Doctor". Usé vector para que aunque no sepamos cuantos pacientes vamos a añadir, usando vector pudieramos añadir datos de pacientes sin tener limitación. Así que usando el nuevo método "agregarDatoDePaciente" vamos a agregar elementos al vector atributo "datoDePaciente" de la clase Doctor. También creé un getter para el vector "getDatoDePaciente".
 
+Para la parte de sobreescritura, añadí 3 métodos nuevos que se llaman "checaLogInfo" en la clase madre "Empleado", en la clase hija "Doctor" y "Administrativo". El método "checaLogInfo" de la clase "Doctor" recibe 3 parametros (userId, password, servicio) para checar que si la login información del usario (doctor) está en el sistema y, al contrario, el de la clase "Administrativo" recibe 2 parametros (userId, password) para checar su login información. Ya que es sobreescritura, en la clase madre "Empleado" también existe ese método. 
+
+Para la parte de sobrecarga, en la clase "Doctor" y la clase "Administrativo", hay 3 constructores y uno de ellos reciben solo el "userId" y "password" como parametros y otro recibe todos los atributos de cada clase.
+
+Otros pequeños cambios fueron el tipo de return de "getEstudio()" y "getTratamiento()" de la clase "DatoDePaciente". Ahora van a regresar el puntador (la dirección de los arreglos).  
