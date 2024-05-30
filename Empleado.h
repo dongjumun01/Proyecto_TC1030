@@ -3,8 +3,7 @@
 #define EMPLEADO_H
 
 #include <iostream>
-#include "Doctor.h"
-#include "Administrativo.h"
+#include <sstream>
 
 using namespace std;
 
@@ -14,14 +13,21 @@ class Empleado
 protected:
 	string userId;
 	string password;
+	string nombre;
+	string tipo;
 public:
-	Empleado() : userId(""), password(""){};
-	Empleado(string _userId, string _password) : userId(_userId), password(_password){}; 
+	Empleado() : userId(""), password(""), nombre(""), tipo("") {};
+	Empleado(string _userId, string _password, string _nombre, string _tipo) : userId(_userId), password(_password), nombre(_nombre), tipo(_tipo){}; 
 	void setUserId(string _userId);
 	void setPassword(string _password);
+	void setNombre(string _nombre);
+	void setTipo(string _tipo);
 	string getUserId();
 	string getPassword();
-	bool checaLogInfo(string _userId, string _password); //sobreescritura
+	string getNombre();
+	string getTipo();
+	virtual string to_string() { return ""; } //sobreescritura
+	virtual void agregarPaciente() {}
 };
 
 #endif
