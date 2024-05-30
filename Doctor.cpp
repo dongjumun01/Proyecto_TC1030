@@ -81,7 +81,7 @@ void Doctor::guradarInfoDePago(string _userId, int _numDePaciente, vector<DatoDe
 			if (_datoDePaciente.at(i).getTratamiento()[2] == true) { montoTotal += 120; } //dobutamina
 			if (_datoDePaciente.at(i).getTratamiento()[3] == true) { montoTotal += 111; } //metilprednisolona
 			if (_datoDePaciente.at(i).getTratamiento()[4] == true) { montoTotal += 78; } //salbutamol
-			fs << std::to_string(montoTotal) << "t";
+			fs << std::to_string(montoTotal) << "\t";
 			fs << _userId << "\n";
 		}
 		cout << "¡Datos Guardados Exitosamente!" << endl;
@@ -94,11 +94,11 @@ string Doctor::to_string()
 	stringstream ss;
 	ss << "Bienvenido/a, doctor/a " << nombre << endl;
 	if (servicio == 1) { ss << "Servicio: Cirugia General" << endl; }
-	else if (servicio == 2) { ss << "Servicio: Gineco-Obstetricia" << servicio << endl; }
-	else if (servicio == 3) { ss << "Servicio: Medicina Interna" << servicio << endl; }
-	else if (servicio == 4) { ss << "Servicio: Pediatria" << servicio << endl; }
-	else if (servicio  == 5) { ss << "Servicio: Urgencias" << servicio << endl; }
-	else { ss << "Servicio: Medicina familiar" << servicio << endl; }
+	else if (servicio == 2) { ss << "Servicio: Gineco-Obstetricia" << endl; }
+	else if (servicio == 3) { ss << "Servicio: Medicina Interna" << endl; }
+	else if (servicio == 4) { ss << "Servicio: Pediatria" << endl; }
+	else if (servicio  == 5) { ss << "Servicio: Urgencias" << endl; }
+	else { ss << "Servicio: Medicina familiar" << endl; }
 
 	return ss.str();
 }
