@@ -148,7 +148,6 @@ int main()
 						doctor.setServicio(servicio);  
 						doctor.agregarPaciente(dato_P); 
 						numDePaciente++; //para saber cuantos pacinetes lleva el doctor.
-						cout << "¡Dato guardado exitosamente!" << endl;
 						cout << "¿Deseas guardar mas datos de paciente? (Y/N): ";
 						cin >> stringValue;
 						while (1)
