@@ -30,3 +30,46 @@ Para la parte de sobreescritura, añadí 3 métodos nuevos que se llaman "checaL
 Para la parte de sobrecarga, en la clase "Doctor" y la clase "Administrativo", hay 3 constructores y uno de ellos reciben solo el "userId" y "password" como parametros y otro recibe todos los atributos de cada clase.
 
 Otros pequeños cambios fueron el tipo de return de "getEstudio()" y "getTratamiento()" de la clase "DatoDePaciente". Ahora van a regresar el puntador (la dirección de los arreglos). El otro fue agregar el método "checaIdDePaciente" de la clase "Adminstrativo". Lo creé para checar que si ese id del paciente existe en el sistema.
+# Cambio del avance 3
+
+![Proyecto2_3 drawio](https://github.com/DongjuMun/Proyecto_TC1030/assets/150094637/4bbe8922-938b-41e5-8ff1-54ae4225f74c)
+
+El mayor cambio fue añadir la clase "Hospital" para guardar los objetos de la clase "Doctor" y "Administrativo" con "new" (para guardar estos datos de heap) a un arreglo de la clase "Empleado". En el main, para aceder a los métodos "to_string()" de las clases hijas ("Doctor" y "Administrativo") usamos "virtual" en el método "to_string()" de la clase madre "Empleado" (polimorfismo). 
+
+Para probar el programa dejo los casos de preuba.
+
+- caso 1
+intput : 1 //opcion 1
+intput : dmltk05 //id
+input : qlqjsdh //pw
+input : 5 //servicio
+output : Bienvenido/a, doctor/a ----
+output : Servicio: Urgencias
+input : Pol Manolo Salinas Lopez //nombre del paciente
+input : m //sexo
+input : 17/01/1989 //fecha de nacimiento
+input : 120 //num de cama
+input : Paciente varón de 35 años, sin alergias farmacológicas conocidas y en tratamiento con olanzapina
+por trastorno depresivo, derivado a urgencias por
+deterioro del estado general. Según refiere la familia, presenta cuadro febril y malestar general de
+aproximadamente un mes de evolución, de posible
+origen urinario, que ha sido tratado con antitérmicos y posteriormente con levofloxacino. Pese a
+ello, persiste clínica y empeoramiento progresivo,
+presentando disnea a mínimos esfuerzos, tos no
+productiva y dolor intenso en MMII. //diagnosis
+input : Y
+input : Y
+input : N
+input : N
+input : N
+input : Se realiza extracción de muestra para hemocultivos (positivos para Streptococcus agalactiae en 2
+muestras sucesivas separadas por 3 días) y se
+administra tratamiento antitérmico. Al recibir el resultado de la radiografía de tórax, se inicia tratamiento antibiótico de amplio espectro con amoxicilina-clavulánico más claritromicina. //sintoma
+input : Y
+input : N
+input : N
+input : Y
+input : N
+input : 19/05/2024
+input : 29/05/2024
+ 
