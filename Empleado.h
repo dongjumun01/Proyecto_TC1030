@@ -27,7 +27,6 @@ public:
 	string getNombre();
 	string getTipo();
 	virtual string to_string() { return ""; } //sobreescritura
-	virtual void agregarPaciente() {}
 };
 
 #endif
