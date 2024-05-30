@@ -89,10 +89,9 @@ void Administrativo::guardaInfoDeHaPagado(string _userId, string _idDePaciente, 
 	if (!fs) { cout << "Archivo no encontrado" << endl; }
 	else
 	{
-		fs << _idDePaciente << "t";
-		if (_haPagado) { fs << "true" << "t"; }
+		fs << _idDePaciente << "\t";
+		if (_haPagado) { fs << "true" << "\t"; }
 		fs << std::to_string(_montoTotal) << "\n";
-		cout << "¡Datos Guardados Exitosamente!" << endl;
 		fs.close();
 	}
 }
