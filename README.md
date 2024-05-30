@@ -58,18 +58,40 @@ ello, persiste clínica y empeoramiento progresivo,
 presentando disnea a mínimos esfuerzos, tos no
 productiva y dolor intenso en MMII. //diagnosis
 input : Y
+
 input : Y
+
 input : N
+
 input : N
+
 input : N
+
 input : Se realiza extracción de muestra para hemocultivos (positivos para Streptococcus agalactiae en 2
 muestras sucesivas separadas por 3 días) y se
 administra tratamiento antitérmico. Al recibir el resultado de la radiografía de tórax, se inicia tratamiento antibiótico de amplio espectro con amoxicilina-clavulánico más claritromicina. //sintoma
+
 input : Y
+
 input : N
+
 input : N
+
 input : Y
+
 input : N
+
 input : 19/05/2024
+
 input : 29/05/2024
+
+input : N
+
+output : Elegiste N. Saliendo al menu...
+
+output : ¡Datos Guardados Exitosamente!
+
+output : ¡Datos Guardados Exitosamente!
+
+=> al menu
  
