@@ -109,7 +109,7 @@ output : ¡Datos Guardados Exitosamente!
 
 => al menu
 
--caso 2
+- caso 2
 
 (Antes de realizar, checa que el text file rufwp04_pago.txt esta vacio)
 
