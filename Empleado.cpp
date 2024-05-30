@@ -11,6 +11,16 @@ void Empleado::setPassword(string _password)
 	password = _password;
 }
 
+void Empleado::setNombre(string _nombre)
+{
+	nombre = _nombre;
+}
+
+void Empleado::setTipo(string _tipo)
+{
+	tipo = _tipo;
+}
+
 string Empleado::getUserId()
 {
 	return userId;
@@ -21,8 +31,12 @@ string Empleado::getPassword()
 	return password;
 }
 
-bool Empleado::checaLogInfo(string _userId, string _password)
+string Empleado::getNombre()
 {
-	//checa Login Info.
+	return nombre;
 }
 
+string Empleado::getTipo()
+{
+	return tipo;
+}
