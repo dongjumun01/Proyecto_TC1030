@@ -2,34 +2,40 @@
 
 DatoDePaciente::DatoDePaciente()
 {
-	nombre = "";
+	nombre_doc = "";
+	nombre_pac = "";
 	sexo = "";
 	fechaDeNacimiento = "";
 	numDeCama = 0;
 	diagnosis = "";
-	for (int i = 0; i < 10; i++) { estudio[i] = false; }
+	for (int i = 0; i < 5; i++) { estudio[i] = false; }
 	sintoma = "";
-	for (int i = 0; i < 10; i++) { tratamiento[i] = false; }
+	for (int i = 0; i < 5; i++) { tratamiento[i] = false; }
 	fechaInicio = "";
 	fechaFin = "";
 }
-DatoDePaciente::DatoDePaciente(string _nombre, string _sexo, string _fechaDeNacimiento, int _numDeCama, string _diagnosis, bool _estudio[], string _sintoma, bool _tratamiento[], string _fechaInicio, string _fechaFin)
+DatoDePaciente::DatoDePaciente(string _nombreDoc, string _nombrePac, string _sexo, string _fechaDeNacimiento, int _numDeCama, string _diagnosis, bool _estudio[], string _sintoma, bool _tratamiento[], string _fechaInicio, string _fechaFin)
 {
-	nombre = _nombre;
+	nombre_doc = _nombreDoc;
+	nombre_pac = _nombreDoc;
 	sexo = _sexo;
 	fechaDeNacimiento = _fechaDeNacimiento;
 	numDeCama = _numDeCama;
 	diagnosis = _diagnosis;
-	for (int i = 0; i < 10; i++) { estudio[i] = _estudio[i]; }
+	for (int i = 0; i < 5; i++) { estudio[i] = _estudio[i]; }
 	sintoma = _sintoma;
-	for (int i = 0; i < 10; i++) { tratamiento[i] = _tratamiento[i]; }
+	for (int i = 0; i < 5; i++) { tratamiento[i] = _tratamiento[i]; }
 	fechaInicio = _fechaInicio;
 	fechaFin = _fechaFin;
 
 }
-void DatoDePaciente::setNombre(string _nombre)
+void DatoDePaciente::setNombreDoc(string _nombreDoc)
 {
-	nombre = _nombre;
+	nombre_doc = _nombreDoc;
+}
+void DatoDePaciente::setNombrePac(string _nombrePac)
+{
+	nombre_pac = _nombrePac;
 }
 void DatoDePaciente::setSexo(string _sexo)
 {
@@ -47,17 +53,17 @@ void DatoDePaciente::setDiagnosis(string _diagnosis)
 {
 	diagnosis = _diagnosis;
 }
-void DatoDePaciente::setEstudio()
+void DatoDePaciente::setEstudio(bool _arr[])
 {
-
+	copy(_arr, _arr + 5, estudio);
 }
 void DatoDePaciente::setSintoma(string _sintoma)
 {
 	sintoma = _sintoma;
 }
-void DatoDePaciente::setTratamiento()
+void DatoDePaciente::setTratamiento(bool _arr[])
 {
-
+	copy(_arr, _arr + 5, tratamiento);
 }
 void DatoDePaciente::setFechaInicio(string _fechaInicio)
 {
@@ -67,9 +73,13 @@ void DatoDePaciente::setFechaFin(string _fechaFin)
 {
 	fechaFin = _fechaFin;
 }
-string DatoDePaciente::getNombre()
+string DatoDePaciente::getNombreDoc()
 {
-	return nombre;
+	return nombre_doc;
+}
+string DatoDePaciente::getNombrePac()
+{
+	return nombre_pac;
 }
 string DatoDePaciente::getSexo()
 {
@@ -109,6 +119,35 @@ string DatoDePaciente::getFechaFin()
 }
 string DatoDePaciente::creaIdDePaciente(string _nombre, string _sexo, string _fechaDeNacimiento)
 {
-	//crear id para el paciente.
+	string id;
+	char c;
+	//nombre
+	for (int i = 0; i < _nombre.length(); i++)
+	{
+		if (_nombre[i] == ' ') {}
+		else if (tolower(_nombre[i]) <= 'm')
+		{
+			c = tolower(_nombre[i]) + 13;
+			id += c;
+		}
+		else
+		{
+			c = tolower(_nombre[i]) - 13;
+			id += c;
+		}
+	}
+	//sexo
+	id += _sexo;
+	//fecha de nacimiento
+	for (int i = 0; i < _fechaDeNacimiento.length(); i++)
+	{
+		if (_fechaDeNacimiento[i] == '/') {}
+		else
+		{
+			c = _fechaDeNacimiento[i] + 49;
+			id += c;
+		}
+	}
+	return id;
 }
 
