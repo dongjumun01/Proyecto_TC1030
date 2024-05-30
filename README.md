@@ -39,16 +39,27 @@ El mayor cambio fue añadir la clase "Hospital" para guardar los objetos de la c
 Para probar el programa dejo los casos de preuba.
 
 - caso 1
+  
 intput : 1 //opcion 1
+
 intput : dmltk05 //id
+
 input : qlqjsdh //pw
+
 input : 5 //servicio
+
 output : Bienvenido/a, doctor/a ----
+
 output : Servicio: Urgencias
+
 input : Pol Manolo Salinas Lopez //nombre del paciente
+
 input : m //sexo
+
 input : 17/01/1989 //fecha de nacimiento
+
 input : 120 //num de cama
+
 input : Paciente varón de 35 años, sin alergias farmacológicas conocidas y en tratamiento con olanzapina
 por trastorno depresivo, derivado a urgencias por
 deterioro del estado general. Según refiere la familia, presenta cuadro febril y malestar general de
@@ -57,6 +68,7 @@ origen urinario, que ha sido tratado con antitérmicos y posteriormente con levo
 ello, persiste clínica y empeoramiento progresivo,
 presentando disnea a mínimos esfuerzos, tos no
 productiva y dolor intenso en MMII. //diagnosis
+
 input : Y
 
 input : Y
@@ -93,5 +105,44 @@ output : ¡Datos Guardados Exitosamente!
 
 output : ¡Datos Guardados Exitosamente!
 
+(checa que la info del paciente se guardó en el text file de dmltk05_pacientes.txt y en el infoDePago.txt)
+
 => al menu
- 
+
+-caso 2
+
+(Antes de realizar, checa que el text file rufwp04_pago.txt esta vacio)
+
+input : 2 //opcion 2
+
+input : rufwp04 //id
+
+input : alfghtlq //pw
+
+output : Bienvenido/a, doctor/a ----
+
+input : xneraertvanpnanfpnyrebfbcacbjef //id de paciente
+
+output : El monto total de paciente es 980 (mxn).
+
+output : ¿Se ha realizado el pago? (Y/N):
+
+input : Y
+
+output : Se esta gurando el cambio...
+
+output : ¡Guradado exitosamente!
+
+output : Saliendo al menu...
+
+-> al menu
+
+input : 3
+
+output : Hasta luego.
+
+(checa que si los datos se guardaron en el text file rufwp04_pago.txt)
+
+
+
+
