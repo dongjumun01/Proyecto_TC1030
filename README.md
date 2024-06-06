@@ -5,7 +5,8 @@ El programa muestra un menu que tiene 3 opciones: 1. Guardar el dato de paciente
 # Consideraciones 
 Para inciar sesión, hay que ingresar ciertos userIds y passwords:
 
-<Doctor>
+- Doctor
+
 
 1. userId: dmltk01 | password: qlqjsdlf | servicio: 1
   
@@ -20,7 +21,8 @@ Para inciar sesión, hay que ingresar ciertos userIds y passwords:
 6. userId: dmltk06 | password: qlqjsdbr | servicio: 6
 
 
-<Administrativo>
+- Administrativo
+
 
 1. userId: rufwp01 | password: alfghclf
 
