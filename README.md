@@ -7,17 +7,28 @@ Para inciar sesión, hay que ingresar ciertos userIds y passwords:
 
 <Doctor>
 1. userId: dmltk01 | password: qlqjsdlf | servicio: 1
-2. userId: dmltk02 | password: qlqjsdl | servicio: 2
-3. userId: dmltk03 | password: qlqjstka | servicio: 3
-4. userId: dmltk04 | password: qlqjstk | servicio: 4
-5. userId: dmltk05 | password: qlqjsdh | servicio: 5
-6. userId: dmltk06 | password: qlqjsdbr | servicio: 6
   
+2. userId: dmltk02 | password: qlqjsdl | servicio: 2
+ 
+3. userId: dmltk03 | password: qlqjstka | servicio: 3
+ 
+4. userId: dmltk04 | password: qlqjstk | servicio: 4
+ 
+5. userId: dmltk05 | password: qlqjsdh | servicio: 5
+ 
+6. userId: dmltk06 | password: qlqjsdbr | servicio: 6
+
+
 <Administrativo>
+  
 1. userId: rufwp01 | password: alfghclf
+
 2. userId: rufwp02 | password: alfghvkf
+
 3. userId: rufwp03 | password: alfghrn
+
 4. userId: rufwp04 | password: alfghtlq
+
 
 Hay que tener mucho cuidado con los datos que ingreses. Si el programa pide entre 'm' y 'f', hay que ingresar 'm' o 'f' (minúscula). Si el programa pide entre 'Y' o 'N', hay que ingresar 'Y' o 'N' (mayúscula). Si el programa pide "DD/MM/YY" forma, hay que ingresar, por ejemplo, "24/05/2024". Si uno de ellos no cumplen, en el archivo de texto, se va a guardar un valor de basura y así que el programa no va a correr bien hasta que se borren los valores de basura y se corra el programa de nuevo.
 
@@ -26,8 +37,11 @@ Para la opción 2 del programa, para ingresar el id de paciente, hay que abrir e
 El programa solo corre en la consola y esta hecho con c++ standard por lo que corre en todos los sistemas operativos
 
 compilar con en window y mac: "g++ main.cpp Hospital.cpp Empleado.cpp Doctor.cpp Administrativo.cpp DatoDePaciente.cpp -o main"
+
                               
                               "main" - window
+
+                              
                               "./main" - mac/linux
 
 
