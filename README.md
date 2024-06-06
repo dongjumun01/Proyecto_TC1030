@@ -6,6 +6,7 @@ El programa muestra un menu que tiene 3 opciones: 1. Guardar el dato de paciente
 Para inciar sesión, hay que ingresar ciertos userIds y passwords:
 
 <Doctor>
+
 1. userId: dmltk01 | password: qlqjsdlf | servicio: 1
   
 2. userId: dmltk02 | password: qlqjsdl | servicio: 2
@@ -20,7 +21,7 @@ Para inciar sesión, hay que ingresar ciertos userIds y passwords:
 
 
 <Administrativo>
-  
+
 1. userId: rufwp01 | password: alfghclf
 
 2. userId: rufwp02 | password: alfghvkf
@@ -36,7 +37,9 @@ Para la opción 2 del programa, para ingresar el id de paciente, hay que abrir e
  
 El programa solo corre en la consola y esta hecho con c++ standard por lo que corre en todos los sistemas operativos
 
-compilar con en window y mac: "g++ main.cpp Hospital.cpp Empleado.cpp Doctor.cpp Administrativo.cpp DatoDePaciente.cpp -o main"
+compilar con en window y mac: 
+                              
+                              "g++ main.cpp Hospital.cpp Empleado.cpp Doctor.cpp Administrativo.cpp DatoDePaciente.cpp -o main"
 
                               
                               "main" - window
