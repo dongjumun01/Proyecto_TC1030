@@ -33,7 +33,7 @@ Para inciar sesión, hay que ingresar ciertos userIds y passwords:
 4. userId: rufwp04 | password: alfghtlq
 
 
-Hay que tener mucho cuidado con los datos que ingreses. Si el programa pide entre 'm' y 'f', hay que ingresar 'm' o 'f' (minúscula). Si el programa pide entre 'Y' o 'N', hay que ingresar 'Y' o 'N' (mayúscula). Si el programa pide "DD/MM/YY" forma, hay que ingresar, por ejemplo, "24/05/2024". Si uno de ellos no cumplen, en el archivo de texto, se va a guardar un valor de basura y así que el programa no va a correr bien hasta que borres los valores de basura manualmente y se corra el programa de nuevo.
+Hay que tener mucho cuidado con los datos que ingreses. Al momento de elegir las opciones, hay que ingresar solo estos tres numeros: 1, 2, 3 (o otros si se permiten). Si ingresas un caractar, el programa va a caer. Esto aplica a ingresar el valor de servicio o número de cama también. Además, si el programa pide entre 'm' y 'f', hay que ingresar 'm' o 'f' (minúscula). Si el programa pide entre 'Y' o 'N', hay que ingresar 'Y' o 'N' (mayúscula). Si el programa pide "DD/MM/YY" forma, hay que ingresar, por ejemplo, "24/05/2024". Si uno de ellos no cumplen, en el archivo de texto, se va a guardar un valor de basura y así que el programa no va a correr bien hasta que borres los valores de basura manualmente y se corra el programa de nuevo.
 
 Para la opción 2 del programa, para ingresar el id de paciente, hay que abrir el archivo de texto "infoDePago.txt" para checar los nuevos datos recién guardados. Si no, el programa no va a correr. Los primeros letras que están separados de los otros datos en el archivo de texto son los ids.
  
