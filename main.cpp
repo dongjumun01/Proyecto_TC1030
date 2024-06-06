@@ -76,7 +76,7 @@ int main()
 						cin >> stringValue;
 						dato_P.setFechaDeNacimiento(stringValue);
 						//guarda el numero de cama de paciente.
-						cout << "Ingreasa el numer de cama de paciente:";
+						cout << "Ingreasa el numero de cama de paciente: ";
 						cin >> intValue;
 						dato_P.setNumDeCama(intValue);
 						//guarda el diagnosis de paciente.
@@ -223,7 +223,7 @@ int main()
 
 						if (administrativo.checaIdDePaciente(stringValue)) //Si el id de paciente existe en el sistema,
 						{
-							administrativo.setIdDePaciente(stringValue);
+							administrativo.setIdDePaciente(stringValue); 
 							cout << "El monto total de paciente es " << administrativo.getMontoTotal() << " (mxn)." << endl;
 							while (boolValue)
 							{
@@ -233,7 +233,7 @@ int main()
 								{
 									administrativo.setHaPagado(true);
 									cout << "Se esta gurando el cambio..." << endl;
-									administrativo.guardaInfoDeHaPagado(administrativo.getUserId(), administrativo.getIdDePaciente(), administrativo.getHaPagado(), administrativo.getMontoTotal());
+									administrativo.guardaInfoDeHaPagado(administrativo.getUserId(), administrativo.getIdDePaciente(), administrativo.getHaPagado(), administrativo.getMontoTotal()); //se guarda los datos
 									cout << "¡Guradado exitosamente!" << endl;
 									boolValue = false; //sale de este ciclo y del ciclo afuera.
 									cout << "Saliendo al menu..." << endl;
@@ -302,14 +302,15 @@ int main()
 				}
 			}
 		}
-		else if (opcion == 3)
+		else if (opcion == 3) //para salir
 		{
 			cout << "Hasta luego." << endl;
-			exit = true;
+			delete hospital.getEmpleado(0); //iberar la memoria
+			exit = true; //salir de el ciclo while de todo el prgrama
 		}
 		else
 		{
-			cout << "Ingreso incorreto." << endl;
+			cout << "Ingreso incorreto." << endl; //regresa al inicio del programa
 		}
 	}
 
