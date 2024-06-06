@@ -31,7 +31,7 @@ Para inciar sesión, hay que ingresar ciertos userIds y passwords:
 4. userId: rufwp04 | password: alfghtlq
 
 
-Hay que tener mucho cuidado con los datos que ingreses. Si el programa pide entre 'm' y 'f', hay que ingresar 'm' o 'f' (minúscula). Si el programa pide entre 'Y' o 'N', hay que ingresar 'Y' o 'N' (mayúscula). Si el programa pide "DD/MM/YY" forma, hay que ingresar, por ejemplo, "24/05/2024". Si uno de ellos no cumplen, en el archivo de texto, se va a guardar un valor de basura y así que el programa no va a correr bien hasta que se borren los valores de basura y se corra el programa de nuevo.
+Hay que tener mucho cuidado con los datos que ingreses. Si el programa pide entre 'm' y 'f', hay que ingresar 'm' o 'f' (minúscula). Si el programa pide entre 'Y' o 'N', hay que ingresar 'Y' o 'N' (mayúscula). Si el programa pide "DD/MM/YY" forma, hay que ingresar, por ejemplo, "24/05/2024". Si uno de ellos no cumplen, en el archivo de texto, se va a guardar un valor de basura y así que el programa no va a correr bien hasta que borres los valores de basura manualmente y se corra el programa de nuevo.
 
 Para la opción 2 del programa, para ingresar el id de paciente, hay que abrir el archivo de texto "infoDePago.txt" para checar los nuevos datos recién guardados. Si no, el programa no va a correr. Los primeros letras que están separados de los otros datos en el archivo de texto son los ids.
  
@@ -48,6 +48,8 @@ compilar con en window y mac:
                               "./main" - mac/linux
 
 
-
-
+# Cambios
+El primer cambio eliminar la clase "InfoDePago" ya que puedo realizar los metodos en el método "guardarInfoDePago" de la clase "Doctor" sin la necesidad de crear una clase nueva, asignar sus atributos y calcular el monto total.
+El otro cambio fue el atributo "datoDePaciente" de la clase "Doctor". Usé vector para que aunque no sepamos cuantos pacientes vamos a añadir, usando vector pudieramos añadir datos de pacientes sin tener limitación. Así que usando el nuevo método "agregarDatoDePaciente" vamos a agregar elementos al vector atributo "datoDePaciente" de la clase Doctor.
+Ultimamente, agregé una clase "Hospital" para guardar los objetos de la clase "Doctor" y "Administrativo" con "new" (para guardar estos datos de heap) a un arreglo de puntadores de la clase "Empleado". En el main, para aceder a los métodos "to_string()" de las clases hijas ("Doctor" y "Administrativo") usamos "virtual" en el método "to_string()" de la clase madre "Empleado" (polimorfismo). 
 
