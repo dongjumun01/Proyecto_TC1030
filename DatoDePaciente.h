@@ -1,6 +1,8 @@
 /*
-	La clase DatoDePaciente es una clase que esta una relacion de composicion con la clase Doctor.
-	Tiene los constructores, getters y setters, y un metodo para crear el id de paciente.
+	La clase DatoDePaciente es una clase que esta 
+ 	una relacion de composicion con la clase Doctor.
+	Tiene los constructores, getters y setters, 
+ 	y un metodo para crear el id de paciente.
 */
 #pragma once
 #ifndef DATODEPACIENTE_H
@@ -30,7 +32,11 @@ private:
 //Declaro los constructores y metodos que va a tener el objeto
 public:
 	DatoDePaciente(); //sobrecarga
-	DatoDePaciente(string _nombreDoc, string _nombrePac, string _sexo, string _fechaDeNacimiento, int _numDeCama, string _diagnosis, bool _estudio[], string _sintoma, bool _tratamiento[], string _fechaInicio, string _fechaFin); //sobrecarga
+	DatoDePaciente(string _nombreDoc, string _nombrePac, string _sexo, 
+                       string _fechaDeNacimiento, int _numDeCama, 
+                       string _diagnosis, bool _estudio[], string _sintoma, 
+                       bool _tratamiento[], string _fechaInicio, 
+                       string _fechaFin); //sobrecarga
 	void setNombreDoc(string _nombreDoc);
 	void setNombrePac(string _nombrePac);
 	void setSexo(string _sexo);
