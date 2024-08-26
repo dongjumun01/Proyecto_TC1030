@@ -15,7 +15,10 @@ DatoDePaciente::DatoDePaciente()
 	fechaFin = "";
 }
 //Constrcutor de todos los atributos de DatoDePaciente. Sobrecarga
-DatoDePaciente::DatoDePaciente(string _nombreDoc, string _nombrePac, string _sexo, string _fechaDeNacimiento, int _numDeCama, string _diagnosis, bool _estudio[], string _sintoma, bool _tratamiento[], string _fechaInicio, string _fechaFin)
+DatoDePaciente::DatoDePaciente(string _nombreDoc, string _nombrePac, string _sexo, 
+			       string _fechaDeNacimiento, int _numDeCama, string _diagnosis, 
+                               bool _estudio[], string _sintoma, bool _tratamiento[], 
+                               string _fechaInicio, string _fechaFin)
 {
 	nombre_doc = _nombreDoc;
 	nombre_pac = _nombreDoc;
@@ -295,11 +298,14 @@ string DatoDePaciente::getFechaFin()
 	return fechaFin;
 }
 /*
-	creaIdDePaciente crea un id de paciente basado en el nombre, sexo y la fecha de nacimiento del paciente.
+	creaIdDePaciente crea un id de paciente basado en el nombre, 
+        sexo y la fecha de nacimiento del paciente.
 
-	crea el id de paciente usando el nombre, sexo y fehca de nacimiento del pacinete usando el concepto de ascii code.
+	crea el id de paciente usando el nombre, sexo y fehca de nacimiento 
+        del pacinete usando el concepto de ascii code.
 
-	@param string _nombre(para crear el id), string _sexo(para crear el id), string _fechaDeNacimiento(para crear el id)
+	@param string _nombre(para crear el id), string _sexo(para crear el id), 
+               string _fechaDeNacimiento(para crear el id)
 	@return string(id de paciente)
 */
 string DatoDePaciente::creaIdDePaciente(string _nombre, string _sexo, string _fechaDeNacimiento)
@@ -309,15 +315,19 @@ string DatoDePaciente::creaIdDePaciente(string _nombre, string _sexo, string _fe
 	//nombre
 	for (int i = 0; i < _nombre.length(); i++)
 	{
-		if (_nombre[i] == ' ') {} //si hay espacio, no hagas nada
-		else if (tolower(_nombre[i]) <= 'm') //si el minuscula del caracter es chiquito que 'm'
+		//si hay espacio, no hagas nada
+		if (_nombre[i] == ' ') {} 
+		//si el minuscula del caracter es chiquito que 'm'
+		else if (tolower(_nombre[i]) <= 'm') 
 		{
-			c = tolower(_nombre[i]) + 13; //agrega 13 mas (ascii code) para que todavia sean alfabetos 
+			//agrega 13 mas (ascii code) para que todavia sean alfabetos 
+			c = tolower(_nombre[i]) + 13; 
 			id += c; //concatena c en la variable id.
 		}
 		else
 		{
-			c = tolower(_nombre[i]) - 13; //disminuye 13 (ascii code) para que todavia sean alfabetos
+			//disminuye 13 (ascii code) para que todavia sean alfabetos
+			c = tolower(_nombre[i]) - 13; 
 			id += c; //concatena c en la variable id.
 		}
 	}
