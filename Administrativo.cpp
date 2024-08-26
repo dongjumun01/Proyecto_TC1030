@@ -7,14 +7,18 @@ Administrativo::Administrativo():Empleado()
 	montoTotal = 0;
 }
 //Constructor sin los datos de los atributos( de Adminstrativo (idDePaciente, haPagado, montoTotal). Sobrecarga
-Administrativo::Administrativo(string _userId, string _password, string _nombre, string _tipo) :Empleado(_userId, _password, _nombre, _tipo)
+Administrativo::Administrativo(string _userId, string _password, 
+			       string _nombre, string _tipo) 
+                               :Empleado(_userId, _password, _nombre, _tipo)
 {
 	idDePaciente = "";
 	haPagado = false;
 	montoTotal = 0;
 }
 //Constructor con los datos de los atributos de Administrativo. Sobrecarga
-Administrativo::Administrativo(string _userId, string _password, string _nombre, string _tipo, string _idDePaciente, bool _haPagado, float _montoTotal):Empleado(_userId, _password, _nombre, _tipo)
+Administrativo::Administrativo(string _userId, string _password, string _nombre,
+                               string _tipo, string _idDePaciente, bool _haPagado,
+                               float _montoTotal):Empleado(_userId, _password, _nombre, _tipo)
 {
 	idDePaciente = _idDePaciente;
 	haPagado = _haPagado;
@@ -121,16 +125,24 @@ bool Administrativo::checaIdDePaciente(string _idDePaciente)
 			if (fs.eof()) { break; } //si es el final del archivo sale de ciclo
 			else //si no
 			{
-				getline(fs, line, '\t'); //lee el archivo hasta que salga un tab y guarda estos datos en la variable line.
-				if (line == _idDePaciente) //si ese line es igual _idDePaciente
+				//lee el archivo hasta que salga un tab y guarda estos datos en la variable line.
+				getline(fs, line, '\t'); 
+				//si ese line es igual _idDePaciente
+				if (line == _idDePaciente) 
 				{
-					getline(fs, line, '\t'); //lee mas hasta que salga un tab y guarda estos datos en la variable line.
-					montoTotal = stof(line); //convierta lo que esta en la variable line en floatante y lo asigna en la varibale montoTotal
-					fs.close(); //se cierra el archivo
-					haEncontrado = true; //para salir del ciclo
-					return true; //regresa true
+					//lee mas hasta que salga un tab y guarda estos datos en la variable line.
+					getline(fs, line, '\t');
+					//convierta lo que esta en la variable line en floatante y lo asigna en la varibale montoTotal
+					montoTotal = stof(line); 
+					//se cierra el archivo
+					fs.close(); 
+					//para salir del ciclo
+					haEncontrado = true; 
+					//regresa true
+					return true; 
 				}
-				else { getline(fs, line, '\n'); } //si no lee el archivo hasta que salga un line change y guarda estos datos en la variable line.
+			 	//si no lee el archivo hasta que salga un line change y guarda estos datos en la variable line.
+				else { getline(fs, line, '\n'); } 
 			}
 		}
 		fs.close(); //si no lo encuentra, se cierra el archivo de texto
@@ -145,10 +157,13 @@ bool Administrativo::checaIdDePaciente(string _idDePaciente)
 	guarda estos datos. 
 
 
-	@param string _userId(para el nombre del archivo del texto), string _idDePaciente(para guardarlo), bool _haPagado(para guardarlo), float _montoTotal(para guardarlo)
+	@param string _userId(para el nombre del archivo del texto), 
+ 	       string _idDePaciente(para guardarlo), bool _haPagado(para guardarlo), 
+	       float _montoTotal(para guardarlo)
 	@return
 */
-void Administrativo::guardaInfoDeHaPagado(string _userId, string _idDePaciente, bool _haPagado, float _montoTotal)
+void Administrativo::guardaInfoDeHaPagado(string _userId, string _idDePaciente, 
+                                          bool _haPagado, float _montoTotal)
 {
 	//guarda la informacion de que si ha pagado o no con la informacion del administrativo.
 	stringstream ss;
@@ -159,7 +174,8 @@ void Administrativo::guardaInfoDeHaPagado(string _userId, string _idDePaciente, 
 	else //si se abre
 	{
 		fs << _idDePaciente << "\t"; //se guarda el id de paciente y le da un espacio de tab.
-		if (_haPagado) { fs << "true" << "\t"; } //si ha pagado, se escribe "true" en el archivo de texto y le da un tab. si no ha pagado, no se usa esa funcion.
+		//si ha pagado, se escribe "true" en el archivo de texto y le da un tab. si no ha pagado, no se usa esa funcion.
+		if (_haPagado) { fs << "true" << "\t"; } 
 		fs << std::to_string(_montoTotal) << "\n"; //convierte montoTotal(float) a string. lo guarda y le da un cambio de linea
 		fs.close(); //se cierra el file
 	}
