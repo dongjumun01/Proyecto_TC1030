@@ -132,7 +132,8 @@ bool Administrativo::checaIdDePaciente(string _idDePaciente)
 				{
 					//lee mas hasta que salga un tab y guarda estos datos en la variable line.
 					getline(fs, line, '\t');
-					//convierta lo que esta en la variable line en floatante y lo asigna en la varibale montoTotal
+					//convierta lo que esta en la variable line en floatante 
+					//y lo asigna en la varibale montoTotal
 					montoTotal = stof(line); 
 					//se cierra el archivo
 					fs.close(); 
@@ -141,7 +142,8 @@ bool Administrativo::checaIdDePaciente(string _idDePaciente)
 					//regresa true
 					return true; 
 				}
-			 	//si no lee el archivo hasta que salga un line change y guarda estos datos en la variable line.
+			 	//si no lee el archivo hasta que salga un line change y 
+				//guarda estos datos en la variable line.
 				else { getline(fs, line, '\n'); } 
 			}
 		}
@@ -150,7 +152,8 @@ bool Administrativo::checaIdDePaciente(string _idDePaciente)
 	}
 }
 /*
-	guardaInfoDeHaPagado guarda el id de paciente, haPagado y montoTotal en el archivo de texto de ese adminstrativo.
+	guardaInfoDeHaPagado guarda el id de paciente, haPagado y montoTotal 
+ 	en el archivo de texto de ese adminstrativo.
 
 	gurada la informacion del id de paciente, haPagado y montoTotal. 
 	se abre el archivo de texto de ese adminstrativo (userId_pago.txt) usando stringstream.
@@ -174,9 +177,12 @@ void Administrativo::guardaInfoDeHaPagado(string _userId, string _idDePaciente,
 	else //si se abre
 	{
 		fs << _idDePaciente << "\t"; //se guarda el id de paciente y le da un espacio de tab.
-		//si ha pagado, se escribe "true" en el archivo de texto y le da un tab. si no ha pagado, no se usa esa funcion.
+		//si ha pagado, se escribe "true" en el archivo de texto y le da un tab. 
+		//si no ha pagado, no se usa esa funcion.
 		if (_haPagado) { fs << "true" << "\t"; } 
-		fs << std::to_string(_montoTotal) << "\n"; //convierte montoTotal(float) a string. lo guarda y le da un cambio de linea
+		//convierte montoTotal(float) a string.
+		//lo guarda y le da un cambio de linea
+		fs << std::to_string(_montoTotal) << "\n";  
 		fs.close(); //se cierra el file
 	}
 }
