@@ -1,5 +1,7 @@
 /*
-	La clase Empleado es una clase abstracta que esta en la relacion de herencia con la clase Doctor y Administrativo.
+	La clase Empleado es una clase abstracta que esta 
+ 	en la relacion de herencia con la clase Doctor 
+  	y Administrativo.
 	Tiene getters y setters de sus atributos.
 */
 #pragma once
